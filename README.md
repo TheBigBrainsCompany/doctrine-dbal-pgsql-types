@@ -11,22 +11,27 @@ Quick Start
 
 ### Registering Types in Doctrine DBAL
 
+```PHP
 <?php
 
 use Doctrine\DBAL\Types\Type;
 
 Type::addType('tbbc_pgsql_binary_safe_array', "Tbbc\\Doctrine\\DBAL\\Pgsql\\Types\\BinarySafeArrayType");
 Type::addType('tbbc_pgsql_binary_safe_object', "Tbbc\\Doctrine\\DBAL\\Pgsql\\Types\\BinarySafeObjectType");
+```
 
 
 ### Registering Types in a Symfony2 application
 
+```YAML
 # config.yml
 doctrine:
     dbal:
         types:
             tbbc_pgsql_binary_safe_array: "Tbbc\\Doctrine\\DBAL\\Pgsql\\Types\\BinarySafeArrayType"
             tbbc_pgsql_binary_safe_object: "Tbbc\\Doctrine\\DBAL\\Pgsql\\Types\\BinarySafeObjectType"
+```
+
 
 ### Mapping
 
